@@ -1,0 +1,26 @@
+@mixin xs {
+    @media (max-width: $screen-xs) {
+    @content;
+    }
+   }
+   @mixin sm {
+    @media (max-width: $screen-sm) {
+    @content;
+    }
+   }
+   @mixin md {
+    @media (min-width: $screen-sm) and (max-width: $screen-md) {
+    @content;
+    }
+   }
+   @mixin xl {
+    @media (min-width: $screen-xl) {
+    @content;
+    }
+   }
+   @mixin flex($direction: row, $justify: center, $align: center) {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justify;
+        align-items: $align;
+   }

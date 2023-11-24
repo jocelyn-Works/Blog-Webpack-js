@@ -1,0 +1,79 @@
+@import "../assets/styles/variables";
+@import "../assets/styles/mixins";
+.content {
+
+  @include flex;
+
+  form {
+    width: 700px;
+    padding: 2rem;
+    box-shadow: $box-shadow;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.741);
+    
+    @include flex(column, $align: flex-start);
+
+    @include xs {
+      width: 100%;
+    }
+    @include sm{
+      width: 100%;
+    }
+     h2 {
+      width: 100%;
+      font-size: 4rem;
+      @include flex
+    }
+        .form-group {
+       
+        width: 100%;
+        margin-bottom: 2rem;
+      @include flex(column, $align: flex-start);
+      label {
+        font-size: 2rem;
+        color: $accent-color;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        border: 2px solid  $divider-color;
+        // outline: none;
+        font-size: 1.8rem;
+        border-radius: 3px;
+        &:focus {
+          border-color: $primary-color;
+        }
+      }
+      input {
+        padding: 6px 10px;
+        border-radius: 10px;
+        
+        
+      }
+      textarea {
+        min-height: 20rem;
+        padding: 10px;
+        border-radius: 10px;
+
+      }
+      select {
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 2rem;
+
+      }
+    }
+    .form-btn-container {
+      width: 100%;
+      @include flex;
+
+    .btn {
+        margin-left: 1rem;
+    }
+}
+       
+  }
+}

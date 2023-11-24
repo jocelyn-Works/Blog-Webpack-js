@@ -1,0 +1,36 @@
+:root {
+    font-size: 62.5%;
+   }
+   body {
+        font-size: 2rem;
+        color: $text-color;
+        font-family: $font-family;
+        
+        background: 
+        repeating-radial-gradient(circle at bottom left, $divider-color),
+        repeating-radial-gradient(circle at bottom right, $divider-color);
+   background-blend-mode: overlay;
+   }
+   h1, h2, h3, h4 {
+        margin-bottom: 2rem;
+   }
+   $sizes-titles : (1, 3.5rem), (2, 3rem), (3, 2.5rem), (4, 2rem);
+   @each $title, $font-size in $sizes-titles {
+        h#{$title} {
+        font-size: $font-size;
+    }
+   }
+   ul {
+        list-style: none;
+   }
+   img {
+        max-width: 100%;
+   }
+   a {
+        color: $text-color;
+        text-decoration: none;
+   }
+
+   strong{
+     color: $accent-color;
+   }
